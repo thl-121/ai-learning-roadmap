@@ -58,6 +58,7 @@ feature_names = x.columns###.columns：提取表格所有列名，也就是所�
 for name,coef in zip(feature_names,model.coef_):###zip()作用把「特征名字列表」和「系数数组」按顺序两两绑定配对
     print(name,"对房价影响系数:",coef)
 
+
 ###预测测试集
 y_pred = model.predict(x_test)
 
@@ -71,7 +72,9 @@ print(result)
 
 ###评估模型效果
 from sklearn.metrics import mean_absolute_error,mean_squared_error,r2_score###sklearn.metrics：sklearn 专门存放模型评价指标的工具包；
-
+###mean_absolute_error "平均绝对误差"
+###mean_squared_error "均方误差"
+###r2_score "R2系数"
 mae = mean_absolute_error(y_test,y_pred)
 mse = mean_squared_error(y_test,y_pred)
 r2=r2_score(y_test,y_pred)
@@ -112,7 +115,7 @@ plt.plot(range(len(y_pred)),y_pred,marker="s",label="预测房价")
 plt.title("真实房价 vs 预测房价")
 plt.xlabel("测试样本编号")
 plt.ylabel("房价（万元）")
-plt.legend()
+plt.legend()###用来显示图例的来区分多条曲线
 
 plt.savefig("house_price_prediction.png")
 plt.show()

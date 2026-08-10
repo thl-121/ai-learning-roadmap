@@ -1,5 +1,5 @@
 # 基础NumPy代码
-import numpy as np
+import numpy as np###Numpy是专门用来高速处理大规模数字数组
 scores=np.array([88,92,75,63,99,84,70,56,91,85])
 print("成绩数组:",scores)
 print("平均分:",np.mean(scores))

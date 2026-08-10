@@ -54,7 +54,7 @@ print("测试集数量:",len(x_test))
 print("训练集数量:",len(y_train))
 print("测试集数量:",len(y_test))
 
-###训练逻辑回归模型
+###训练逻辑回归模型(分类算法)
 from sklearn.linear_model import LogisticRegression
 
 model = LogisticRegression(max_iter=200)###表示最多训练 200 次，避免模型没训练完就停止
@@ -124,7 +124,7 @@ plt.yticks([0,1,2],iris.target_names)
 
 for i in range(len(cm)):
     for j in range(len(cm[i])):
-        plt.text(j,i,cm[i][j],ha="center",va="center",color="black")
+        plt.text(i,j,cm[i][j],ha="center",va="center",color="black")
 ###这两个for循环是为了双重循环，在格子里标注数字 plt.text(x坐标, y坐标, 要写的内容)：在指定坐标写入文字，ha="center"：水平居中；va="center"：垂直居中，数字刚好落在格子正中间，color="black"：字体黑色
 plt.colorbar()###在图表右边生成一条颜色标尺，用来对照：颜色深浅对应数值大小。
 plt.tight_layout()

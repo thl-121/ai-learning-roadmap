@@ -1,8 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+
 ###解决中文显示问题
 plt.rcParams["font.sans-serif"] = ["SimHei"]
 plt.rcParams["axes.unicode_minus"] = False
+
 
 df = pd.read_csv("students.csv")
 
