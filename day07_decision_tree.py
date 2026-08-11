@@ -38,6 +38,9 @@ print("决策树模型准确率 (Accuracy):",acc)
 import matplotlib.pyplot as plt
 from sklearn.tree import plot_tree
 
+plt.rcParams["font.sans-serif"] = ["SimHei"]
+plt.rcParams["axse.unicode_minus"] = False
+
 ###可视化决策树
 plt.figure(figsize=(12,8))
 plot_tree(
