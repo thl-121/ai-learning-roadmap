@@ -2,7 +2,6 @@ from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 import pandas as pd
 
-from day06_classification import accuracy
 
 ###加载数据
 iris = load_iris()
