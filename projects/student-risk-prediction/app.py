@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
-
+import joblib
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -32,8 +32,7 @@ x_train,x_test,y_train,y_test = train_test_split(
     random_state=42
 )
 
-model = RandomForestClassifier(n_estimators=100,random_state=42)
-model.fit(x_train,y_train)
+model = joblib.load("student_risk_model.pkl")
 y_pred = model.predict(x_test)
 accuracy = accuracy_score(y_test,y_pred)
 ###添加顶部指标卡片
