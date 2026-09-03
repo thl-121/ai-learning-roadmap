@@ -55,3 +55,21 @@
 -> 划分风险等级
 -> 保存预测结果
 -> 生成可视化图表
+
+如何运行项目
+
+1.安装依赖
+
+在项目目录下运行：
+
+```powershell
+pip install -r requirements.txt
+
+2.训练模型
+python train_model.py
+
+运行后会生成
+student_risk_model.pkl
+
+3.启动网页应用
+streamlit run app.py
