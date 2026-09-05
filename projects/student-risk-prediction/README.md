@@ -73,3 +73,32 @@ student_risk_model.pkl
 
 3.启动网页应用
 streamlit run app.py
+
+## 项目截图
+
+### 应用首页
+
+![应用首页](app_home.png)
+
+### 挂科风险预测结果
+
+![挂科风险预测结果](app_prediction.png)
+
+## 项目结构
+
+```text
+student-risk-prediction/
+  app.py
+  train_model.py
+  student_scores.csv
+  student_risk_model.pkl
+  requirements.txt
+  README.md
+  prediction_result.csv
+  risk_prediction_result.csv
+  score_distribution.png
+  absence_average_scatter.png
+  model_comparison.png
+  feature_importance.png
+  app_home.png
+  app_prediction.png
